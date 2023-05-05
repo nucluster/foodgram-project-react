@@ -78,8 +78,5 @@ docker compose exec backend python manage.py importcsv
 По адресу http://localhost/api/docs/ доступна документация API.
 
 
-Работающий сайт доступен по адресу http://naumov.ddns.net
-
-Данные для входа:  
-- email: admin@example.com  
-- password: praktikum  
+Работающий сайт доступен по адресу 
+ 
