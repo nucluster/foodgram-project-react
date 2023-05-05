@@ -1,4 +1,4 @@
-![example workflow](https://github.com/naumovvv/foodgram-project-react/actions/workflows/main.yml/badge.svg)
+![example workflow](https://github.com/nucuster/foodgram-project-react/actions/workflows/main.yml/badge.svg)
 
 ## Проект Foodgram
 ### Описание проекта
@@ -21,7 +21,7 @@ Cайт Foodgram («Продуктовый помощник»).
 Для запуска проекта на локальной машине у вас должен быть установлен Docker.
 Клонируйте репозиторий:
 ```
-git clone git@github.com:naumovvv/foodgram-project-react.git
+git clone git@github.com:nucluster/foodgram-project-react.git
 ```
 
 Измените свою текущую рабочую директорию:
