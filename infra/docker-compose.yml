@@ -45,3 +45,7 @@ volumes:
   foodgram_static_volume:
   foodgram_media_volume:
   foodgram_db_volume:
+
+networks:
+  default:
+    name: foodgram-network
