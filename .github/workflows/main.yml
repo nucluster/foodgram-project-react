@@ -1,4 +1,4 @@
-name: Foodgram workflow
+name: Foodgram build-deploy workflow
 
 on:
   push:
@@ -40,19 +40,18 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: infra/*
           target: ~/foodgram
-
-#      - name: executing remote ssh commands to deploy
-#        uses: appleboy/ssh-action@v0.1.8
-#        with:
-#          host: ${{ secrets.DEPLOY_HOST }}
-#          port: ${{ secrets.SSH_PORT }}
-#          username: ${{ secrets.DEPLOY_USERNAME }}
-#          key: ${{ secrets.SSH_KEY }}
-#          script: |
-#            cd infra/
-#            docker compose down
-#            docker image rm ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
-#            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
+      - name: executing remote ssh commands to deploy
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.DEPLOY_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd infra/
+            docker compose down
+            docker image rm ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
 #            docker compose up -d
 
 #  send_message:
