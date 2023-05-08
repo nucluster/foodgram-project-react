@@ -23,7 +23,7 @@ from api.serializers import (CartSerializer, FavoritRecipeSerializer,
                              TagSerializer)
 
 
-class MyUserViewSet(UserViewSet):
+class CustomUserViewSet(UserViewSet):
     pagination_class = Pagination
 
     def get_queryset(self):
