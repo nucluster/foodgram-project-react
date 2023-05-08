@@ -3,22 +3,24 @@ services:
 
   frontend:
     image: nucluster/foodgram_frontend:latest
+    container_name: foodgram-frontend
     volumes:
       - ../frontend/:/app/result_build/
   
   db:
     image: postgres:15.2-alpine3.17
     volumes:
-      - db_volume:/var/lib/postgresql/data/
+      - foodgram_db_volume:/var/lib/postgresql/data/
     env_file:
       - ./.env
 
   backend:
     image: nucluster/foodgram_backend:latest
+    container_name: foodgram-backend
     restart: always
     volumes:
-      - static_volume:/app/backend_static/
-      - media_volume:/app/media/
+      - foodgram_static_volume:/app/backend_static/
+      - foodgram_media_volume:/app/media/
     depends_on:
       - db
     env_file:
@@ -26,6 +28,7 @@ services:
 
   nginx:
     image: nginx:1.24.0-alpine3.17-slim
+    container_name: foodgram-nginx
     ports:
       - "127.0.0.1:8082:80"
     volumes:
@@ -38,6 +41,6 @@ services:
       - backend
 
 volumes:
-  static_volume:
-  media_volume:
-  db_volume:
+  foodgram_static_volume:
+  foodgram_media_volume:
+  foodgram_db_volume:
