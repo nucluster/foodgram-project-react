@@ -9,6 +9,7 @@ services:
   
   db:
     image: postgres:15.2-alpine3.17
+    container_name: foodgram-db
     volumes:
       - foodgram_db_volume:/var/lib/postgresql/data/
     env_file:
