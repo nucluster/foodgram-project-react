@@ -78,5 +78,5 @@ docker compose exec backend python manage.py importcsv
 По адресу http://localhost/api/docs/ доступна документация API.
 
 
-Работающий сайт доступен по адресу 
+Работающий сайт доступен по адресу https://foodgram.vvnaumov.ru/
  
