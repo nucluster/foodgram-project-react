@@ -53,6 +53,7 @@ jobs:
             docker container rm foodgram-backend
             docker image rm ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
+            docker compose down
             docker compose up -d
 
 #  send_message:
