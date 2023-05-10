@@ -52,6 +52,7 @@ jobs:
             docker compose down
             docker image rm ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
+            docker container prune -f
             docker compose up -d
 
 #  send_message:
