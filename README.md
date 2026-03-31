@@ -21,7 +21,7 @@ Cайт Foodgram («Продуктовый помощник»).
 Для запуска проекта на локальной машине у вас должен быть установлен Docker.
 Клонируйте репозиторий:
 ```
-git clone git@github.com:nucluster/foodgram-project-react.git
+git clone https://github.com/nucluster/foodgram-project-react.git
 ```
 
 Измените свою текущую рабочую директорию:
