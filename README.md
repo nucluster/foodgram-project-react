@@ -31,6 +31,8 @@ cd infra
 
 Создайте .env файл следущего содержания:
 ```
+DEBUG=0(0 - если не хотите получать отладочную информацию, дефолт = 1)
+ALLOWED_HOSTS=айпи_или_доменное_имя_вашего_серевера
 DB_ENGINE=django.db.backends.postgresql
 DB_NAME=postgres
 POSTGRES_USER=postgres
@@ -75,8 +77,8 @@ docker compose exec backend python manage.py importcsv
 ```
 
 
-По адресу http://localhost/api/docs/ доступна документация API.
+По адресу http://[айпи_или_доменное_имя_вашего_серевера]/api/docs/ доступна документация API.
 
 
-Работающий сайт доступен по адресу https://foodgram.vvnaumov.ru/
+Работающий сайт https://foodgram.vvnaumov.ru/
  
