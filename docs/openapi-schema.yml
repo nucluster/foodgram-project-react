@@ -3,7 +3,7 @@ info:
   title: 'Foodgram'
   version: ''
 servers:
-- url: "https://foodgram.vvnaumov.ru/v1"
+- url: "https://foodgram.vvnaumov.ru"
   description: "Server description"
 paths:
   /api/users/:
