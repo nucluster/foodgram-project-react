@@ -137,5 +137,5 @@ dmypy.json
 media/
 migrations/
 
-frontend/
+**/node_modules/
 .vscode/
