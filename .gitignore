@@ -136,3 +136,6 @@ dmypy.json
 #static/
 media/
 migrations/
+
+frontend/
+.vscode/
