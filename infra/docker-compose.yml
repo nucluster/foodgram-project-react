@@ -7,7 +7,7 @@ services:
       - ../frontend/:/app/result_build/
   
   db:
-    image: postgres:15.2-alpine3.17
+    image: postgres:18-alpine
     container_name: foodgram-db
     volumes:
       - foodgram_db_volume:/var/lib/postgresql/data/
@@ -27,7 +27,7 @@ services:
       - ./.env
 
   nginx:
-    image: nginx:1.24.0-alpine3.17-slim
+    image: nginx:mainline-alpine
     container_name: foodgram-nginx
     ports:
       - "127.0.0.1:8082:80"
