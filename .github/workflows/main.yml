@@ -73,8 +73,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/foodgram/infra
-            docker rm -f foodgram-frontend foodgram-backend foodgram-db 2>/dev/null || true
             docker compose down --remove-orphans || true
+            docker rm -f foodgram-frontend foodgram-backend foodgram-db 2>/dev/null || true
             docker image rm ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest || true
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/foodgram_backend:latest
             docker compose up -d --remove-orphans
