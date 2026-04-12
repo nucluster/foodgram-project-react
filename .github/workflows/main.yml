@@ -40,13 +40,13 @@ jobs:
           script: mkdir -p ~/foodgram
 
       - name: Copy files via SSH
-        uses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@v1.0.0
         with:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          source: "infra/, docs/"
+          source: "infra,docs"
           target: ~/foodgram
 
       - name: Execute deploy commands
