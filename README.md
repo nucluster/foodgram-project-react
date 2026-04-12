@@ -33,6 +33,7 @@ cd infra
 ```
 DEBUG=0(0 - если не хотите получать отладочную информацию, дефолт = 1)
 ALLOWED_HOSTS=айпи_или_доменное_имя_вашего_серевера
+CSRF_TRUSTED_ORIGINS=https://айпи_или_доменное_имя_вашего_серевера
 DB_ENGINE=django.db.backends.postgresql
 DB_NAME=postgres
 POSTGRES_USER=postgres
